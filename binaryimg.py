@@ -3,7 +3,7 @@
 import sys, argparse, cv2
 import numpy as np
 
-def change_brightness(img, value=30):
+def change_brightness(img, value=0):
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     h, s, v = cv2.split(hsv)
     v = cv2.add(v,value)
